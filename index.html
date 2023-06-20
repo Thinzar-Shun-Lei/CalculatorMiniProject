@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./calculator.css" />
+  </head>
+  <body>
+    <div
+      class="container-lg container-md container-sm my-5 border p-5 w-50 m-auto"
+    >
+      <div class="mb-5">
+        <h2 class="greeting font-monospace">Welcome to the Calculator .</h2>
+      </div>
+      <div class="col-12">
+        <div
+          class="row d-lg-flex justify-content-between align-content-center m-auto mb-5 firstRow"
+        >
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 h-100 flex-fill">
+            <input id="display" type="text" disabled class="w-100" />
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <input
+              type="button"
+              value="C"
+              class="w-100 buttonCal text-danger fw-bold"
+              id="clear"
+            />
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <button class="w-100" id="back">
+              <i class="bi bi-arrow-90deg-left mb-2 fw-bold"></i>
+            </button>
+          </div>
+        </div>
+        <!-- 2nd row -->
+        <div class="row mt-4 gx-4">
+          <div class="col">
+            <input type="button" value="7" class="w-100 button" id="seven" />
+          </div>
+          <div class="col">
+            <input type="button" value="8" class="w-100 button" id="eight" />
+          </div>
+          <div class="col">
+            <input type="button" value="9" class="w-100 button" id="nine" />
+          </div>
+          <div class="col">
+            <input
+              type="button"
+              value="/"
+              class="w-100 buttonCal"
+              onclick="display.value += '/'"
+            />
+          </div>
+        </div>
+        <!-- 3rd row -->
+        <div class="row mt-4 gx-4">
+          <div class="col">
+            <input type="button" value="4" class="w-100 button" id="four" />
+          </div>
+          <div class="col">
+            <input type="button" value="5" class="w-100 button" id="five" />
+          </div>
+          <div class="col">
+            <input type="button" value="6" class="w-100 button" id="six" />
+          </div>
+          <div class="col">
+            <input
+              type="button"
+              value="*"
+              class="w-100 buttonCal"
+              onclick="display.value += '*'"
+            />
+          </div>
+        </div>
+        <!-- 4th row -->
+        <div class="row mt-4 gx-4">
+          <div class="col">
+            <input type="button" value="1" class="w-100 button" id="one" />
+          </div>
+          <div class="col">
+            <input type="button" value="2" class="w-100 button" id="two" />
+          </div>
+          <div class="col">
+            <input type="button" value="3" class="w-100 button" id="three" />
+          </div>
+          <div class="col">
+            <input
+              type="button"
+              value="-"
+              class="w-100 buttonCal"
+              onclick="display.value += '-'"
+            />
+          </div>
+        </div>
+        <!-- 5th row -->
+        <div class="row mt-4 gx-4">
+          <div class="col">
+            <input type="button" value="0" class="w-100 button" id="zero" />
+          </div>
+          <div class="col">
+            <input type="button" value="." class="w-100 button" id="dot" />
+          </div>
+          <div class="col">
+            <input
+              type="button"
+              value="="
+              class="w-100 button fw-bold"
+              id="equalFun"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="button"
+              value="+"
+              class="w-100 buttonCal"
+              onclick="display.value += '+'"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./calculator.js"></script>
+  </body>
+</html>
